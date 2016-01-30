@@ -179,7 +179,7 @@ HTML
     options = options.dup
     css_classes = %w(navbar).tap do |css_classes|
       css_classes << "navbar-#{options.delete(:inverse) ? 'inverse' : 'default'}" unless options.has_key?(:custom)
-      css_classes << "navbar-#{options.delete(:custom) if options.has_key?(:custom)
+      css_classes << "navbar-#{options.delete(:custom)}" if options.has_key?(:custom)
       css_classes << "navbar-fixed-#{options.delete(:fixed)}" if options.has_key?(:fixed)
       css_classes << 'navbar-static-top' if options.delete(:static)
       css_classes << options.delete(:class) if options.has_key?(:class)
